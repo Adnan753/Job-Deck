@@ -5,9 +5,10 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'release']),
   {
     files: ['**/*.{js,jsx}'],
+    ignores: ['electron/**', 'server/**'],
     extends: [
       js.configs.recommended,
       reactHooks.configs.flat.recommended,
@@ -16,6 +17,13 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
       parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+  },
+  {
+    files: ['electron/**/*.js', 'server/**/*.js'],
+    extends: [js.configs.recommended],
+    languageOptions: {
+      globals: globals.node,
     },
   },
 ])
