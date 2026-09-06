@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { 
+import logo from './assets/logo.png';
+import {
   ArrowRight, 
   Sparkles, 
   Check, 
@@ -141,9 +142,7 @@ export default function Landing({ onLaunchDashboard }) {
           
           {/* Logo Brand */}
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <span className="w-8 h-8 rounded-lg bg-[#2C2C28] text-[#FBFBFA] flex items-center justify-center font-serif-elegant text-lg font-bold select-none">
-              JD
-            </span>
+            <img src={logo} alt="Job Deck" className="w-10 h-10 rounded-xl object-cover select-none" />
             <div className="flex flex-col">
               <span className="font-serif-elegant text-lg tracking-tight font-bold text-[#1C1C1A]">
                 Job Deck
@@ -732,9 +731,7 @@ export default function Landing({ onLaunchDashboard }) {
         <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-6">
           
           <div className="flex items-center gap-3">
-            <span className="w-7 h-7 rounded-lg bg-[#2C2C28] text-[#FBFBFA] flex items-center justify-center font-serif-elegant text-base font-bold select-none">
-              JD
-            </span>
+            <img src={logo} alt="Job Deck" className="w-9 h-9 rounded-xl object-cover select-none" />
             <span className="font-serif-elegant text-lg font-bold text-[#1C1C1A]">
               Job Deck Studio
             </span>
